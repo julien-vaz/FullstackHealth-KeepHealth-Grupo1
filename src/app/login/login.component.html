@@ -1,18 +1,18 @@
 <section id="login-section">
-    <form id="login-form">
+    <form id="login-form" (ngSubmit)="signIn()" [formGroup]="signInForm">
         <h2 id="login-title">Seja bem vindo!</h2>
         <div class="input-div">
             <label for="email-input">Email</label>
-            <input name="email-input" type="text" placeholder="Insira seu email">
+            <input name="email-input" type="text" placeholder="Insira seu email" formControlEmail="email">
         </div>
         <div class="input-div">
             <label for="password-input">Senha</label>
-            <input name="password-input" type="password" placeholder="Insira sua senha">
+            <input name="password-input" type="password" placeholder="Insira sua senha" formControlPassword="password">
         </div>
         <div class="button-div">
-            <button>Entrar</button>
-            <button>Esqueci a senha</button>
-            <button>Cadastrar</button>
+            <button type="submit">Entrar</button>
+            <button type="button" (click)="resetPassword()">Esqueci a senha</button>
+            <button type="button" (click)="goToSignUp()">Cadastrar</button>
         </div>
     </form>
 </section>

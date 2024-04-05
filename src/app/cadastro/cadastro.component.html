@@ -1,1 +1,29 @@
-<p>cadastro works!</p>
+<section id="register-section">
+    <form id="register-form" (ngSubmit)="signUp()" [formGroup]="signUpForm">
+        <h2 id="register-title">Faça parte da família!</h2>
+    <div class="input-div">
+        <label for="name-input">Nome</label>
+        <input name="name-input" type="text" placeholder="Insira seu nome" formControlName="name" required>
+    </div>
+    <div class="input-div">
+        <label for="email-input">Email</label>
+        <input name="email-input" type="text" placeholder="Insira seu email" formControlName="email" required>
+    </div>
+    <div class="input-div">
+        <label for="birthdate-input">Data de nascimento</label>
+        <input name="birthdate-input" type="date" formControlName="birthdate" required>
+    </div>
+    <div class="input-div">
+        <label for="password-input">Senha</label>
+        <input name="password-input" type="password" placeholder="Insira sua senha" formControlName="password" required>
+    </div>
+    <div class="input-div">
+        <label for="repeat-password-input">Confirmar senha</label>
+        <input name="repeat-password-input" type="password" placeholder="Confirme sua senha" formControlName="repeatPassword" required>
+    </div>
+    <div class="button-div">
+        <button type="submit">Cadastrar</button>
+        <button type="button" (click)="goToLogin()">Voltar</button>
+    </div>
+    </form>
+</section>
