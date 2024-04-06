@@ -1,0 +1,23 @@
+
+    <section id="profile-section">
+        
+        <ul id="profile-ul">
+            <h2 id="profile-title">Perfil</h2>
+            <li class="li"><label class="profile-label">Nome:</label> {{user.name}}</li>
+            <li class="li"><label class="profile-label">E-mail:</label> {{user.email}} </li>
+            <li class="li"><label class="profile-label">Peso:</label> {{user.weightKg}}kg</li>
+            <li class="li"><label class="profile-label">Altura:</label> {{user.heightCm | height}}</li>
+            <li class="li"><label class="profile-label">Idade:</label> {{user.birthdate | age}}</li>
+            <li id="profile-location">
+                <label class="profile-label">Localização: </label>
+                <input>
+                <button>Pesquisar</button>
+            </li>
+            <li *ngIf="address"><label class="profile-label">Endereço:</label>
+                {{ address.logradouro }}, {{ address.complemento }} — 
+                {{ address.bairro }} —
+                {{ address.localidade }}/{{ address.uf }}.</li>
+            </ul>
+
+
+    </section>
