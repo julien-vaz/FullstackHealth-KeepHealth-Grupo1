@@ -21,6 +21,8 @@ export class CadastroComponent implements OnInit {
       name: new FormControl(''),
       email: new FormControl(''),
       birthdate: new FormControl(''),
+      weightKg: new FormControl(''),
+      heightCm: new FormControl(''),
       password: new FormControl(''),
       repeatPassword: new FormControl('')
     })
@@ -39,6 +41,8 @@ export class CadastroComponent implements OnInit {
       name: this.signUpForm.value.name,
       email: this.signUpForm.value.email,
       birthdate: this.signUpForm.value.birthdate,
+      weightKg: this.signUpForm.value.weightKg,
+      heightCm: this.signUpForm.value.heightCm,
       password: this.signUpForm.value.password,
       repeatPassword: this.signUpForm.value.repeatPassword
     };
